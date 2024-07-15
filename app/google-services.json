@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "901992013791",
+    "firebase_url": "https://fit-track-app-377519-default-rtdb.firebaseio.com",
+    "project_id": "fit-track-app-377519",
+    "storage_bucket": "fit-track-app-377519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901992013791:android:93d98ebde7eeed36fc6e6a",
+        "android_client_info": {
+          "package_name": "com.app.fittrackapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901992013791-fn26576sqajq7p91lg1cctc09iaj4lnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfXr8O-iTU1uz7SA74boYMS7Vj9BoK-s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901992013791-9dstlmct5k88d4jskt4t2b8nlltnn5ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901992013791:android:09165940d1cd89bafc6e6a",
+        "android_client_info": {
+          "package_name": "com.fittrackapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901992013791-fhju2f5877sblme7693b3e1t7sot8r25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fittrackapp",
+            "certificate_hash": "542edd0e45e3dd6b87cee3cc4014382fffbccb41"
+          }
+        },
+        {
+          "client_id": "901992013791-fn26576sqajq7p91lg1cctc09iaj4lnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfXr8O-iTU1uz7SA74boYMS7Vj9BoK-s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901992013791-9dstlmct5k88d4jskt4t2b8nlltnn5ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

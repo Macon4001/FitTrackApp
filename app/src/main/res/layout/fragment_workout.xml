@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FBFBFB"
+
+    tools:context=".fragments.WorkoutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_box_round_bottom_middle"
+            android:gravity="center">
+
+            <Spinner
+                android:id="@+id/spinnerWorkoutPlans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:tooltipText="Select workout plan"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Workout Routines"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/text_low"
+            android:textSize="25sp"/>
+
+        <!-- Section title -->
+        <TextView
+            android:id="@+id/sectionTitleRoutines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/workout_routines"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/text_low"
+            android:textSize="20sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRoutines"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <!-- Section title -->
+        <TextView
+            android:id="@+id/sectionTitleExercises"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/workout_exercises"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/text_low"
+            android:textSize="20sp"/>
+
+        <!-- Recycler view -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExercises"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </LinearLayout>
+
+    <!-- Background blur -->
+    <View
+        android:id="@+id/fragmentExercisesBlur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC1A2237"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:padding="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_margin="@dimen/_20sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutFAB01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="20dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_edit_exercises"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/button2"
+                    android:id="@+id/addExercise"
+                    android:textColor="@color/dark_purple"
+                    android:layout_gravity="center"/>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutFAB02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_gravity="bottom|end"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_edit_routines"
+                    android:textSize="20sp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/button2"
+                    android:id="@+id/addRoutine"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/dark_purple"
+                    android:layout_gravity="center"/>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutFAB03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_edit_plans"
+                    android:textSize="20sp"
+                    android:id="@+id/fabExercises03"
+                    android:textColor="@color/text_high"
+                    android:layout_gravity="center"/>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabExercisesMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+        android:src="@drawable/add"
+        app:tint="#fff"
+        android:backgroundTint="#000000"/>
+
+
+
+
+</FrameLayout>

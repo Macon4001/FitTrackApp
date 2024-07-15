@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealsCreateEditPresetActivity"
+    android:background="@color/dark_purple">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarActivityCreateMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/text_middle"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarActivityCreateMeal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/title_meal_name"
+                android:textColor="@color/text_low"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_box_round_middle"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextMealName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Enter meal name here"
+                    android:background="@null"
+                    android:textColorHint="@color/text_low"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/text_middle" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/title_category"
+                android:textColor="@color/text_low"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_box_round_middle">
+
+                <Spinner
+                    android:id="@+id/spinnerMealCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:tooltipText="Select category" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <!-- Section title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/title_general_data"
+                android:textColor="@color/text_low"
+                android:textSize="20sp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@drawable/shape_box_round_middle">
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/calories_kcal"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCalories"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/fat_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/fat_sat_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFatSat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/carbs_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCarbs"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/sugar_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextSugar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/protein_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProtein"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/salt_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextSalt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/fiber_g"
+                        android:textColor="@color/text_middle"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFiber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:ems="10"
+                        android:hint="0.0"
+                        android:backgroundTint="@color/text_low"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/text_middle"
+                        android:textColorHint="@color/text_low"
+                        android:textStyle="bold" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fadingEdge="vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCancelNewMeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_box_round_light"
+            android:textColor="@color/white"
+            android:text="@string/button_text_cancel" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSaveNewMeal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_box_round_light"
+            android:textColor="@color/white"
+            android:text="@string/button_text_save" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

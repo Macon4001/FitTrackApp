@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:elevation="@dimen/_2sdp"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search location"
+        android:textColor="#7A7A7A"
+        android:singleLine="true"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:visibility="visible"
+        android:paddingLeft="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/tvSearch"/>
+
+
+
+
+</androidx.appcompat.widget.Toolbar>

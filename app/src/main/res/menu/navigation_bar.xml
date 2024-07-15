@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_bar_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:visible="true"
+        android:enabled="true"
+        android:title="Home" />
+
+
+    <item
+        android:id="@+id/third_fragment"
+        android:icon="?attr/actionModePasteDrawable"
+        android:title="Record" />
+    <item
+        android:id="@+id/nav_bar_exersises"
+        android:icon="@drawable/dumbbell"
+        android:visible="true"
+        android:enabled="true"
+        android:title="Workout" />
+
+    <item
+        android:id="@+id/nav_bar_settings"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:visible="true"
+        android:enabled="true"
+        android:title="Profile" />
+
+</menu>
